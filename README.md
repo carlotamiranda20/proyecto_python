@@ -25,3 +25,32 @@ Ejercicio 12. La función toma como argumento una frase, es decir caracteres de 
 Ejercicio 13. La función toma como argumento un conjunto de caracteres (que pueden ser letras o no). Lo primero que hcaemos es crear dos conjuntos vacíos, letras_vistas() que guarde las letras que ya han salido, y letras_ordenadas que es una lista vacía a la que le vamos a añadir las letras que irán apareciendo. Hacemos un bucle for que recorra los caracacteres que le hayamos introducido a la función. Para que solo lea los númericos hacemos isalpha() y con c.lower() not in letras_vistas no repetimos letras que hayan salido (filtrando por las minúsculas para q no cuente mayículas y minúsculas). Si la letra cumple ambas condiciones se anañen a letras_vistas y letras_ordenadas. Por último hacemos un map entre las letras mayúculas y minúculas que aparcen en letras_ordenadas, y devolvemos una lista de tuplas.
 
 Ejercicio 14. La función coge como argumento una lista y una letra. Hacemos letra.lower() para que no distinga entre mayúcula y minúcula. Con palabra.lower().startswith(letra) se verifica si la palabra empieza o no con la letra, y con filter() hacemos q solo se conserven las palabras que cumplan esta condición. Por último se devuelv en forma de lista.
+
+Ejercicio 15. La función con map hace que se aplique a cada elemtno de la lista, lambda x, y genera una nueva lista  ala que se le suman 3, x+3 . 
+
+Ejercicio 16. La función toma como argumentos un s cadena de texto  y un número. Separamos la cadena de texto en palabras con la función .split(). Mediante lambda y  imponemos la condición de que se guarden solo las palabras cuya longitud sea mayor que n. Devolvemos las palabras en una lista.
+
+Ejercicio 17. Importamos la función reduce del móduclo functools. Reduce es una función que reduce la lista a un valor y va iterando de izuqierda a drecha. Como tenemos q cambiar los dígitos a formato decimal lo que hacemos es multiplicar por 10 cada dígito e ir sumando las unidades. 
+
+Ejercicio 18. Primero creamos un diccionario que contenga los nombres, edad y calificación de distintos alumnos. Usamos la función filter para eliminar aquellos que no cumplen la condición de q la calificación>=90. Esto lo hacmoes con la función lambda, ponemos califiación entre [] porque es la clave y no el valor (del diccionario). Se imprimen aquellos estudiantes que cumplen la condición. 
+
+Ejercicio 19. Para saber si el número de la lista es par o impar utilizamos un lambda que evalúa si la división entre 2 es distinta de 0 (se trata de números enteros). En caso de que sea distinto de 0 usamos filter para que solo guarde esos valores (o sea los impares) en una lista. 
+
+Ejercicio 20. Para filtrar por tipo de elemento, hacemos un filter con lambda en que solo se guarden en la lista los valores cuyo tipo sea integer. 
+
+Ejercicio 21. Usamos la funciónn lambda para definir el cubo del parámetro, x en este caso. El uso de lambda hace que sea posible hacerlo de forma más compacta.
+
+Ejercicio 22. Importamos la función reduce. Luego aplicamos esta función mediante lambda a toda la lista, ya que itera sobre todos los elementos de la lista acumulándolos y evaluándolos de izuqierda a derecha.
+
+Ejercicio 23. En este caso reduce va sumando, es decir concatenando las palabras de la lista de izquierda a derecha hasta terminar el total de la lista. 
+
+Ejercicio 24. En este caso la función devuelve la diferencia total de los valores de la lista restanto los elementos de izquierda a derecha.
+
+Ejercicio 25. En este caso se utiliza la función len() para contar el número de caracteres que incluye la cadena de texto que pide como argumento la función, incluyendo espacios y signos de puntuación. 
+
+Ejercicio 26. Mediante la función lambda hacemos la división utilizando % (el operador resto) para que nos devuelva e resto de la división. 
+
+Ejercicio 27. Antes de realizar la división evaluamos la longitud de la lista con len() para evitar la división entre 0. Si es distinta de 0, devuelve el promedio de los valores de la lista. 
+
+Ejercicio 28. La función toma una lista como argumento. Primero creamos una lista vacía, vistos, donde almacenamos los elementos que ya han sido analizados. Mediante un bucle for recorremos los elementos de la lista, y si el elemento está ya presente en la lista vistos, sería el primer elemento repetido y devuelve ese valor. Si no hay ningún elemento repetido devuelve la frase. 
+
